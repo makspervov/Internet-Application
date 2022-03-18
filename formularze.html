@@ -1,78 +1,80 @@
-<!--<!DOCTYPE html>
-<html lang="pl">
-    <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title> Szybki kurs HTML </title>
-</head>
-<body>
+<!DOCTYPE html> 
+<html> 
+ 
+<head> 
+    <title>Lab 1</title> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./formularz.css" type="text/css"> 
+</head> 
+ 
+<body> 
     <div id="kontener">
 
-      <div id="baner"><h1>Szybki kurs HTML</h1> 
-      </div>
-
-      <div id="menu">
-        <a class="link" href="./index.html">Podstawowe znaczniki</a>
-        <a class="link" href="./tabele.html">Tworzenie tabeli</a>
-        <a class="link" href="./formularze.html">Budowa formularzy</a>
-      
-       <h2>Podstawowe znaczniki HTML to:</h2>
-
-        <ul>
-          <li>&lt;html&gt; - korzeń dokumentu</li>
-          <li>&lt;head&gt; - nagłówek strony z informacjami dla przeglądarek</li>
-          <li>&lt;body&gt; - właściwa treść dokumentu widoczna w oknie przeglądarki</li>
-          <li>&lt;div&gt; - element blokowy</li>
-          <li>&lt;p&gt; - akapit</li>
-          <li>&lt;ol&gt; &lt;ul&gt; &lt;li&gt; - elementy listy wypunktowanel lub numerowanej</li>
-          <li>&lt;img&gt; - obrazek</li>
-          <li>&lt;a&gt; - hiperłącze</li>
-
-        </ul>
-        <p><a href="https://validator.w3.org/">HTML walidator <img src="https://www.w3.org/Icons/WWW/w3c_home_nb" alt="Logo walidatora W3C"></a></p> 
-        
-        <div id="tresc">
-          <ul>
-            <li>shambalamba</li>
-          </ul>
+        <div id="baner"><h1>Szybki kurs HTML</h1> 
+        </div>
+  
+        <div id="menu">
+          <a class="link" href="./index.html">Podstawowe znaczniki</a>
+          <a class="link" href="./tabele.html">Tworzenie tabeli</a>
+          <a class="link" href="./formularze.html">Budowa formularzy</a>
         </div>
 
-      <div id="stopka"> &copy;BP
-      </div>
-    </div>
-</body>
-</html>-->
-<div>
-  <form action="mailto:beatap@cs.pollub.pl" method="post">
-  <!-- Przykładowe typy znacznika input -->
-  Podaj login : <input type="text" name="login"/> <br />
-  Podaj hasło: <input type="password" name="pass"/> <br /><br />
-  Wybierz ulubione języki programowania: <br />
-  <input type="checkbox" name="C" value="C" /> Język C/C++
-  <input type="checkbox" name="Java" value="J" /> Język Java
-  <input type="checkbox" name="PHP" value="PHP" /> Język PHP <br />
-  Wybierz przeglądarkę, z której korzystasz najczęściej: <br />
-  <input type="radio" name="przegladarka" value="Ff" /> Firefox <br />
-  <input type="radio" name="przegladarka" value="Ch" /> Chrome <br />
-  <input type="radio" name="przegladarka" value="II" />
-  Internet Explorer<br />
-  <input type="submit" value="Wyślij" />
-  <input type="reset" value="Wyczyść" />
-  <!-- Inne znaczniki pól formularza -->
-  <br />Wskaż hobby i uzasadnij dlaczego to lubisz:
-  <br />
-  <select size="3" name="hobby" multiple="multiple">
-  <option value="t">Turystyka</option>
-  <option value="m">Muzyka</option>
-  <option value="f">Film</option>
-  <option value="s">Sport</option>
-  <option value="i">Inne</option>
-  </select><br />
-  <textarea cols="10" rows="3" name="opinia">
-  Po prostu lubię.
-  </textarea><br />
-  <button name="Kliknij" value="Klikniety">
-   Kliknij tutaj
-  </button>
-  </form>
-  </div>
+        </div> 
+            <div id="tresc"> 
+                <!-- <nav> 
+                    <li> html - korzen dokumentu</li> 
+                    <li> head - naglowek strony z informacjami dla przegladarek</li> 
+                    <li> body - wlaściwa treść dokumentu widoczna w oknie przeglądarki</li> 
+                    <li> div - element blokowy</li> 
+                    <li> p - akapit</li> 
+                    <li>ol, ul i li -elementy listy wypuntkowanej lub numerowanej</li> 
+                    <li>img - obrazek</li> 
+                    <li>a - hiperłacze</li> 
+                </nav> --> 
+                <form action="mailto:" method="post"> 
+                    <!-- Przykładowe typy znacznika input --> 
+                    <div id="title">Przykładowy formularz HTML: </div> <br> 
+
+                    Nazwisko : <input type="text" name="login"/> <br /> 
+
+                    Wiek: <input type="text" name="Wiek" /> <br> 
+
+                    Państwo: <select size="1" name="hobby" multiple="multiple"> 
+                        <option value="t">Turystyka</option> 
+                        <option value="m">Muzyka</option> 
+                        <option value="f">Film</option> 
+                        <option value="s">Sport</option> 
+                        <option value="i">Inne</option> 
+                    </select><br /> 
+
+                    Adres e-mail: <input type="email" name="e-mail" /> <br /><br /> 
+
+                    <h3>Zamawiam tutorial z języka:</h3> <br> 
+                    <input type="checkbox" name="PHP" value="PHP" /> PHP 
+                    <input type="checkbox" name="C/C++" value="C" />C/C++ 
+                    <input type="checkbox" name="Java" value="J" />Java 
+
+                    <h3>Sposób zapłaty</h3> 
+                    <input type="radio" name="przegladarka" value="Ff" /> eurocard 
+                    <input type="radio" name="przegladarka" value="Ch" /> visa 
+                    <input type="radio" name="przegladarka" value="II" />przelew bankowy <br> 
+
+                    <button name="wyślij" value="Klikniety"> Wyślij </button> 
+                    
+                    <button type="submit"> Anuluj </button> 
+
+                    <br />Wskaż hobby i uzasadnij dlaczego to lubisz: 
+                    <br /> 
+                     
+                </form> 
+            </div> 
+            </form> <br> 
+            <div id="stopka"> &copy;BP </div> 
+        </div> 
+    </div> 
+ 
+    </div> 
+</body> 
+ 
+</html>
