@@ -1,23 +1,52 @@
-/*h1,h2,h3{
+h1,h2,h3{
     margin:0;
     padding:0;
-}*/
-
-body {
-    background: #4ae;
-    color:#000040
 }
 
-h1,h2, #stopka{
-    background:#000040;
-    color:#8080ff;
+h1, #stopka{
+    background:#b2b41a;
+    color:#ffffff;
     text-align:center;
 }
 
+#kontener{
+    background: #ffffff;
+}
+
 #menu{
-    background:#ffffff;
+    float: left;
+    width: 16%;
+    padding: 1%;
 }
 
 #tresc{
-    background:#88edff;
+    background:#8dbeff;
+    float: left;
+    width: 60%;
+    padding: 1%;
+}
+
+#pasek{
+    float: right;
+    width: 16%;
+    padding: 1%;
+}
+
+#stopka{
+    clear: both;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    text-align: center;
+}
+
+*.DosBOX{ 
+    background:#0000a0;
+    color:#dbffff;
+    padding:5px;
+    margin:5px;
+    font-size:90%;
+}
+
+*.DosBOX a{
+    color:#ffffb0
 }
