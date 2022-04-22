@@ -78,7 +78,7 @@ footer{
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 720px){
+@media screen and (min-width: 481px) and (max-width: 768px){
     body{
         font-size: 13px;
     }
@@ -89,5 +89,25 @@ footer{
 
     h2 {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width : 481px){
+    nav a{ 
+        width: 100%;
+        padding: 10px 0;
+        font-size:180%;
+        text-align: center;
+    }
+
+    .slajd{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape)
+{
+    body{
+        background: red;
     }
 }
