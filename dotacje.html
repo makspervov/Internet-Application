@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Formularz rejestracyjny</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form action="#" method="get">
+                <p>
+                    Beneficjent:<br />
+                    <input type="text" name="beneficjent" required><br />
+                    
+                    Wartość dotacji:<br />
+                    <input type="number" name="wartosc" required><br />
+                </p>
+
+                <h3>Dane karty płatniczej</h3>
+
+                <p>
+                    Dane karty płatniczej<br />
+                    Visa: <input type="radio" name="kto" value="visa" required>
+                    Mastercard: <input type="radio" name="kto" value="mscrd" required>
+                    American Express: <input type="radio" name="kto" value="amex" required><br />
+                    <br />
+                    
+                    Numer:<br />
+                    <input type="number" name="karta" pattern="16" required><br />
+
+                    Data ważności:<br />
+                    <input type="date" name="data" required><br />
+
+                    Kod CVV:<br />
+                    <input type="number" name="cvv" pattern="3" pattern="4" required><br />
+                </p>
+                <p>
+                    Darczyńca:<br />
+                    <input type="text" name="darczynca" pattern="3" required>
+                </p>
+                <p>
+                    <input type="checkbox" name="akceptacja" required>*Akceptuję regulamin <br />
+                    <input type="submit" value="Rejestruj">
+                    <input type="reset" value="Wyczyść">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
