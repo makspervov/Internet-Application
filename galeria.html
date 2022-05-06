@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css" type="text/css"/>
- <title> Szybki kurs HTML </title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css" type="text/css"/>
+      <link rel="stylesheet" href="css/galeria.css" type="text/css">
+  <title> Galeria </title>
 </head>
   <body>
-    <div id="kontener">
+    <main>
+      <header><h1>Szybki kurs HTML</h1></header>
 
-      <div id="baner"><h1>Szybki kurs HTML</h1></div>
-
-      <div id="menu">
+      <nav>
         <ul id="nav">
           <li><a href="index.html">Podstawy</a></li>
           <li><a href="tabele.html">Tabele</a></li>
@@ -23,11 +23,11 @@
           </li>
           <li><a href="galeria.html">Galeria</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div id="tresc">
-       <h2>Galeria zdjęć:</h2>
-        <ul>
+      <article>
+        <h3 id="naglowek">Galeria zdjęć:</h3>
+        <div>
             <div class="slajd"><img src="miniaturki/obraz1.jpg" alt="Zdjęcie 1" /></div>
             <div class="slajd"><img src="miniaturki/obraz2.jpg" alt="Zdjęcie 2" /></div>
             <div class="slajd"><img src="miniaturki/obraz3.jpg" alt="Zdjęcie 3" /></div>
@@ -38,10 +38,10 @@
             <div class="slajd"><img src="miniaturki/obraz8.jpg" alt="Zdjęcie 8" /></div>
             <div class="slajd"><img src="miniaturki/obraz9.jpg" alt="Zdjęcie 9" /></div>
             <div class="slajd"><img src="miniaturki/obraz10.jpg" alt="Zdjęcie 10" /></div>
-        </ul>
-      </div>
+        </div>
+      </article>
 
-      <div id="pasek">
+      <aside>
         <div class="DosBOX">
           <h3>Walidatory:</h3>
           <ul>
@@ -59,9 +59,9 @@
             <li><a href="https://www.w3schools.com/php/">PHP</a></li>
           </ul>
         </div>
-      </div>
+      </aside>
 
-      <div id="stopka"> &copy;BP</div>
-    </div>
+      <footer> &copy;MP</footer>
+    </main>
   </body>
 </html>

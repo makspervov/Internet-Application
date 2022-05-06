@@ -1,0 +1,32 @@
+table {
+    background:#b3ffb7;
+    text-align:center;
+    width:94%;
+    margin:2%;
+    border:1pt solid #010158;
+}
+
+caption {
+    font-size:120%;
+    font-weight: bold;
+}
+
+tfoot, thead {
+    background:#0d5497;
+    color:#ffffff;
+    font-size:110%;
+    padding: 5pt;
+}
+
+td, th {border:1pt solid #000040;}
+
+tfoot a {color:#ffffff;}
+
+tbody tr:nth-child(even){
+    background:#f1f08e;
+}
+    
+@media screen and (max-width: 720px) {
+    caption {font-size: 100%;}
+    tfoot, thead,tbody{font-size: 65%;}
+}

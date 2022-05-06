@@ -1,0 +1,12 @@
+img {
+    height: 160px;
+    width: 280px;
+    float: left;
+    margin: 1%;
+}
+
+.slajd{margin-left: 6%;}
+
+#naglowek{text-align:center;}
+
+@media screen and (max-width: 720px) {img{width: 93%;}}

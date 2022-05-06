@@ -4,42 +4,57 @@
         <title>Formularz rejestracyjny</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/dotacje.css" type="text/css">
     </head>
     <body>
-        <div>
+
+        <div id="baner"><h1>Formularz dotacji</h1> 
+        </div>
+
+        <div id="formularz">
             <form action="#" method="get">
-                <p>
-                    Beneficjent:<br />
-                    <input type="text" name="beneficjent" required><br />
+                <fieldset>
+                    <p>
+                        Beneficjent:<br />
+                        <input list="firmy" id="beneficjent" name="beneficjent" title="Wybierz beneficjenta z listy lub wpisz go" required />
+                        <datalist id="firmy">
+                            <option value="Wioski dziecięce SOS"></option>
+                            <option value="Czerwony krzyż"></option>
+                            <option value="Spółka niepewnosprawnych"></option>
+                            <option value="Spółka seniorów"></option>
+                            <option value="Szkoła podstawowa"></option>
+                        </datalist><br />
+                        
+                        Wartość dotacji:<br />
+                        <input type="number" name="wartosc" step="5" min="20" title="Wpisz wartość nie mniejszą niż 20" required><br />
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dane karty płatniczej</legend>
+                    <p>
+                        Karta:
+                            Visa: <input type="radio" name="kto" value="visa" required>
+                            Mastercard: <input type="radio" name="kto" value="mscrd" required>
+                            American Express: <input type="radio" name="kto" value="amex" required><br />
+                        <br />
                     
-                    Wartość dotacji:<br />
-                    <input type="number" name="wartosc" required><br />
-                </p>
+                        Numer:<br />
+                        <input type="text" name="karta" pattern="[0-9]{13,16}" placeholder="1234 5678 9012 3456" title="Podaj numer karty złożonej z 13 lub 16 cyfr podanych na karcie" required><br />
 
-                <h3>Dane karty płatniczej</h3>
+                        Data ważności:<br />
+                        <input type="month" name="data" min="2022-06" title="Podaj datę ważności twojej karty płatniczej" required><br />
 
-                <p>
-                    Dane karty płatniczej<br />
-                    Visa: <input type="radio" name="kto" value="visa" required>
-                    Mastercard: <input type="radio" name="kto" value="mscrd" required>
-                    American Express: <input type="radio" name="kto" value="amex" required><br />
-                    <br />
-                    
-                    Numer:<br />
-                    <input type="number" name="karta" pattern="16" required><br />
-
-                    Data ważności:<br />
-                    <input type="date" name="data" required><br />
-
-                    Kod CVV:<br />
-                    <input type="number" name="cvv" pattern="3" pattern="4" required><br />
-                </p>
+                        Kod CVV:<br />
+                        <input type="password" name="cvv" pattern="[0-9]{3,4}" title="Podaj kod CVV złożony z 3 lub 4 cyfr podanych na odwrocie karty" placeholder="XXX" required><br />
+                    </p>
+                </fieldset>
                 <p>
                     Darczyńca:<br />
-                    <input type="text" name="darczynca" pattern="3" required>
+                    <input type="text" name="darczynca" pattern="[a-zA-Z]+$">
                 </p>
                 <p>
-                    <input type="checkbox" name="akceptacja" required>*Akceptuję regulamin <br />
+                    <input type="checkbox" name="akceptacja" title="Dla rejestrowania danych zaakceptuj regulamin" required>*Akceptuję regulamin <br />
                     <input type="submit" value="Rejestruj">
                     <input type="reset" value="Wyczyść">
                 </p>

@@ -1,34 +1,31 @@
 <!DOCTYPE html> 
-<html> 
- 
+<html lang="pl"> 
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="formularze.css" type="text/css"> 
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/formularze.css" type="text/css"> 
+    <title>Pole formularzu</title>
 </head> 
  
 <body> 
-    <div id="kontener">
-
-        <div id="baner"><h1>Szybki kurs HTML</h1> 
-        </div>
-  
-        <div id="menu">
+    <main>
+        <header><h1>Szybki kurs HTML</h1> </header>
+        <nav>
             <ul id="nav">
                 <li><a href="index.html">Podstawy</a></li>
                 <li><a href="tabele.html">Tabele</a></li>
                 <li><a href="">Formularze</a>
                 <ul>
-                    <li><a href="formularze.html">Pola formularza</a></li>
+                    <li><a href="formularze.html">Pole formularzu</a></li>
                     <li><a href="obliczenia.html">Obliczenia w formularzu</a></li>
                 </ul>
                 </li>
-                <li><a href="galeria.html" title="">Galeria</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
             </ul>
-        </div>
+        </nav>
 
-        <div id="tresc"> 
+        <article> 
             <h3>Podstawowe znaczniki HTML:</h3>
             <ul>
                 <li>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</li>
@@ -39,43 +36,42 @@
 
             </ul>
             <form action="mailto:s96523@pollub.edu.pl" method="post"> 
-                <div id="title">
-                    <h3>Przykładowy formularz HTML: </h3>
-                </div> 
+                <header><h3>Przykładowy formularz HTML: </h3></header>
                 
                 <br> 
-                    Imię : <input type="text" name="loginname"/> <br /> 
-                    Nazwisko : <input type="text" name="login"/> <br /> 
-                    Wiek: <input type="text" name="Wiek" /> <br> 
-                    Państwo: <select name="Panstwo"> 
-                        <option value="pl">Polska</option> 
-                        <option value="de">Niemcy</option> 
+                    Imię: <input type="text" name="loginname" maxlength="20" size="15" pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$" required> <br />
+                    Nazwisko: <input type="text" name="login" maxlength="20" size="15" pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$" required> <br /> 
+                    Wiek: <input type="number" name="wiek" min="18" max="99" title="UWAGA! Tworzyć konto mogą tylko pełnoletnie" required> <br> 
+                    Państwo: <select name="panstwo"> 
+                        <option value="pl">Polska</option>
                         <option value="ua">Ukraina</option> 
                         <option value="ch">Czechy</option> 
-                        <option value="lt">Litwa</option> 
+                        <option value="lt">Litwa</option>
+                        <option value="it">Włochy</option>                         
+                        <option value="de">Niemcy</option> 
+                        <option value="es">Hiszpania</option>
                 </select><br /> 
 
-                Adres e-mail: <input type="email" name="e-mail" /> <br /><br /> 
+                Adres e-mail: <input type="email" name="e-mail" maxlength="30" size="30" placeholder="example@domain.com"  pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/> <br />
 
                 <h3>Zamawiam tutorial z języka:</h3> <br> 
-                    <input type="checkbox" name="PHP" value="PHP" /> PHP 
-                    <input type="checkbox" name="C/C++" value="C" /> C/C++ 
-                    <input type="checkbox" name="Java" value="J" /> Java 
+                    <input type="checkbox" name="PHP" value="PHP"/> PHP 
+                    <input type="checkbox" name="C/C++" value="C"/> C/C++ 
+                    <input type="checkbox" name="Java" value="Java"/> Java 
                 <h3>Komentarz do zamówienia: </h3>
-                <textarea cols="10" rows="3" name="comment"> </textarea><br />
+                <textarea cols="30" rows="3" name="comment"> </textarea><br />
 
                 <h3>Sposób zapłaty</h3> 
-                    <input type="radio" name="przegladarka" value="MC" /> Mastercard 
-                    <input type="radio" name="przegladarka" value="VS" /> Visa 
-                    <input type="radio" name="przegladarka" value="DP" /> Przelew bankowy <br> 
+                    <input type="radio" name="przegladarka" value="MC" required/> Mastercard 
+                    <input type="radio" name="przegladarka" value="VS"/> Visa 
+                    <input type="radio" name="przegladarka" value="DP"/> Przelew bankowy <br> 
 
-                <button name="wyślij" value="Klikniety"> Wyślij </button> 
-                    
-                <button type="submit"> Anuluj </button>                      
+                <button type="submit" value="Send"> Wyślij </button> 
+                <button type="reset" value="Reset"> Anuluj </button>                      
             </form> 
-        </div> 
+        </article> 
 
-        <div id="pasek">
+        <aside>
             <div class="DosBOX">
               <h3>Walidatory:</h3>
               <ul>
@@ -93,9 +89,8 @@
                 <li><a href="https://www.w3schools.com/php/">PHP</a></li>
               </ul>
             </div>
-        </div>
-            
-        <div id="stopka"> &copy;BP </div> 
-    </div> 
+        </aside> 
+        <footer> &copy;MP </footer> 
+    </main> 
 </body> 
 </html>

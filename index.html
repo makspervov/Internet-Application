@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css" type="text/css"/>
- <title> Szybki kurs HTML </title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <title> Szybki kurs HTML </title>
 </head>
   <body>
-    <div id="kontener">
-
-      <div id="baner"><h1>Szybki kurs HTML</h1></div>
-
-      <div id="menu">
+    <header><h1>Szybki kurs HTML</h1></header>
+    <main>
+      <nav>
         <ul id="nav">
           <li><a href="index.html">Podstawy</a></li>
           <li><a href="tabele.html">Tabele</a></li>
@@ -23,9 +21,9 @@
           </li>
           <li><a href="galeria.html" title="">Galeria</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div id="tresc">
+      <article>
        <h3>Podstawowe znaczniki HTML:</h3>
         <ul>
           <li>&lt;html&gt; - korzeń dokumentu</li>
@@ -38,10 +36,13 @@
           <li>&lt;a&gt; - hiperłącze</li>
 
         </ul>
-        <p><a href="https://validator.w3.org/">HTML walidator <img src="https://www.w3.org/Icons/WWW/w3c_home_nb" alt="Logo walidatora W3C"></a></p> 
-      </div>
+        <p>
+          <a href="https://validator.w3.org/">HTML walidator 
+          <img src="https://www.w3.org/Icons/WWW/w3c_home_nb" alt="Logo walidatora W3C"></a>
+        </p> 
+      </article>
 
-      <div id="pasek">
+      <aside>
         <div class="DosBOX">
           <h3>Walidatory:</h3>
           <ul>
@@ -59,9 +60,9 @@
             <li><a href="https://www.w3schools.com/php/">PHP</a></li>
           </ul>
         </div>
-      </div>
+      </aside>
 
-      <div id="stopka"> &copy;BP</div>
-    </div>
+      <footer> &copy;MP</footer>
+    </main>
   </body>
 </html>

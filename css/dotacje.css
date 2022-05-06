@@ -1,0 +1,9 @@
+#baner {
+    text-align: center;
+    font-size: 120%;
+    color: #2fcf07;
+}
+
+#formularz form fieldset, #formularz p{
+    text-align: center;
+}
