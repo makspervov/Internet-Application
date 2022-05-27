@@ -10,17 +10,16 @@
       }</style>-->
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css" type="text/css"/>
-     <link rel="stylesheet" href="tabele.css" type="text/css"/>
- <title> Szybki kurs HTML </title>
+     <link rel="stylesheet" href="css/style.css" type="text/css"/>
+     <link rel="stylesheet" href="css/tabele.css" type="text/css"/>
+ <title> Tworzenie tabeli </title>
 </head>
 <body>
-    <div id="kontener">
+    <main>
 
-      <div id="baner"><h1>Szybki kurs HTML</h1> 
-      </div>
+      <header><h1>Szybki kurs HTML</h1></header>
 
-      <div id="menu">
+      <nav>
         <ul id="nav">
           <li><a href="index.html">Podstawy</a></li>
           <li><a href="tabele.html">Tabele</a></li>
@@ -32,11 +31,11 @@
           </li>
           <li><a href="galeria.html" title="">Galeria</a></li>
         </ul>
-      </div>
+      </nav>
         
-      <div id="tresc">
+      <article>
           
-       <h3>Podstawowe znaczniki HTML:</h3>
+       <h3>Podstawowe znaczniki tworzenia tabel w HTML:</h3>
        <ul>
          <li>&lt;table&gt; - znacznik zawierający całą tabelę</li>
          <li>&lt;caption&gt; - tytuł tabeli</li>
@@ -67,7 +66,7 @@
                 <td>Python</td>
                 <td>1</td>
                 <td>3</td></tr>
-              <tr class="parzysty">
+              <tr>
                 <td>C</td>
                 <td>2</td>
                 <td>1</td></tr>
@@ -75,7 +74,7 @@
                 <td>Java</td>
                 <td>3</td>
                 <td>2</td></tr>
-              <tr class="parzysty">
+              <tr>
                 <td>C++</td>
                 <td>4</td>
                 <td>4</td></tr>
@@ -83,7 +82,7 @@
                 <td>C#</td>
                 <td>5</td>
                 <td>5</td></tr>
-              <tr class="parzysty">
+              <tr>
                 <td>Visual Basic</td>
                 <td>6</td>
                 <td>6</td></tr>
@@ -91,7 +90,7 @@
                 <td>JavaScript</td>
                 <td>7</td>
                 <td>7</td></tr>
-              <tr class="parzysty">
+              <tr>
                 <td>PHP</td>
                 <td>8</td>
                 <td>8</td></tr>
@@ -99,7 +98,7 @@
                 <td>Assembly Language</td>
                 <td>9</td>
                 <td>9</td></tr>
-              <tr class="parzysty">
+              <tr>
                 <td>SQL</td>
                 <td>10</td>
                 <td>10</td></tr>
@@ -107,16 +106,14 @@
             <tfoot>
               <tr>
                 <td colspan="3">Na podstawie: 
-                  <p>
-                    <a href="https://tiobe.com/tiobe-index/">https://tiobe.com/tiobe-index/</a>
-                  </p>
+                  <br><a href="https://tiobe.com/tiobe-index/">https://tiobe.com/tiobe-index/</a>
                 </td> 
               </tr>
             </tfoot>
           </table>
-      </div>
+      </article>
 
-      <div id="pasek">
+      <aside>
         <div class="DosBOX">
           <h3>Walidatory:</h3>
           <ul>
@@ -134,9 +131,9 @@
             <li><a href="https://www.w3schools.com/php/">PHP</a></li>
           </ul>
         </div>
-      </div>
+      </aside>
 
-      <div id="stopka"> &copy;BP</div>
-    </div>
+      <footer> &copy;MP</footer>
+    </main>
 </body>
 </html>

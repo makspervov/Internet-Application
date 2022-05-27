@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head lang="pl">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/formularze.css" type="text/css"> 
+    <script src="js/funkcje.js"></script>
+    <title>Obliczenia w formularzu</title>
+</head>
+<body>
+    <header><h1>Szybki kurs HTML</h1> </header>
+    <main>
+        <nav>
+            <ul id="nav">
+                <li><a href="index.html">Podstawy</a></li>
+                <li><a href="tabele.html">Tabele</a></li>
+                <li><a href="">Formularze</a>
+                <ul>
+                    <li><a href="formularze.html">Pole formularzu</a></li>
+                    <li><a href="obliczenia.html">Obliczenia w formularzu</a></li>
+                </ul>
+                </li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h3>Pożyczka</h3>
+            <table>
+                <tr>
+                    <th>Kwota:</th>
+                    <th><input type="text" id="kwota_pozyczki" required></th>
+                </tr>
+                <tr>
+                    <th>Ile rat:</th>
+                    <th><input type="text" id="liczba_rat" required></th>
+                </tr>
+                <tr>
+                    <th>Procent:</th>
+                    <th><input type="text" id="oprocentowanie_roczne" required></th>
+                </tr>
+                <tr>
+                    <th>Rata miesięczna:</th>
+                    <th><input type="text" id="oprocentowanie_miesieczne" disabled></th>
+                </tr>
+                <tr>
+                    <th>Kwota z odsetkami:</th>
+                    <th><input type="text" id="odsetki" disabled></th>
+                </tr>
+            </table>
+            <button class="przycisk_do_wyslania" onclick="raty()">Oblicz ratę stałą</button>
+        </article>
+
+        <aside>
+            <div class="DosBOX">
+              <h3>Walidatory:</h3>
+              <ul>
+                <li><a href="https://validator.w3.org/">HTML</a></li>
+                <li><a href="http://jigsaw.w3.org/css-validator/">CSS</a></li>
+              </ul>
+            </div>
+    
+            <div class="DosBOX">
+              <h3>Kursy:</h3>
+              <ul>
+                <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+                <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+                <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+                <li><a href="https://www.w3schools.com/php/">PHP</a></li>
+              </ul>
+            </div>
+        </aside> 
+
+        <footer> &copy;MP </footer> 
+    </main>
+</body>
