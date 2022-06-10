@@ -1,1 +1,4 @@
-<p>Data taken from Statcounter GS as of May 2022</p>
+<div id="all-os_combined-ww-monthly-202105-202205" width="600" height="400" style="width:600px; height: 400px;"></div>
+<p>Source: <a href="https://gs.statcounter.com/os-market-share">StatCounter Global Stats - OS Market Share</a></p>
+<script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script>
+<script type="text/javascript" src="https://gs.statcounter.com/chart.php?all-os_combined-ww-monthly-202105-202205&chartWidth=600"></script>
