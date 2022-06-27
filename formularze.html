@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="stylesheet" href="css/formularze.css" type="text/css"> 
+    <script src="js/test.js"></script>
     <title>Pole formularzu</title>
 </head> 
  
@@ -35,14 +36,14 @@
                 <li>&lt;button&gt; - pole formularza typu przycisk</li>
 
             </ul>
-            <form action="mailto:s96523@pollub.edu.pl" method="post"> 
+            <form> 
                 <header><h3>Przykładowy formularz HTML: </h3></header>
                 
                 <br> 
-                    Imię: <input type="text" name="loginname" maxlength="20" size="15" pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$" required> <br />
-                    Nazwisko: <input type="text" name="login" maxlength="20" size="15" pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$" required> <br /> 
-                    Wiek: <input type="number" name="wiek" min="18" max="99" title="UWAGA! Tworzyć konto mogą tylko pełnoletnie" required> <br> 
-                    Państwo: <select name="panstwo"> 
+                    Imię: <input type="text" id="loginname" maxlength="20" size="15" pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$" required> <br />
+                    Nazwisko: <input type="text" id="login" maxlength="20" size="15" pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$" required> <br /> 
+                    Wiek: <input type="number" id="wiek" min="18" max="99" title="UWAGA! Tworzyć konto mogą tylko pełnoletnie" required> <br> 
+                    Państwo: <select id="panstwo"> 
                         <option value="pl">Polska</option>
                         <option value="ua">Ukraina</option> 
                         <option value="ch">Czechy</option> 
@@ -52,23 +53,28 @@
                         <option value="es">Hiszpania</option>
                 </select><br /> 
 
-                Adres e-mail: <input type="email" name="e-mail" maxlength="30" size="30" placeholder="example@domain.com"  pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/> <br />
+                Adres e-mail: <input type="email" id="e-mail" maxlength="30" size="30" placeholder="example@domain.com"  pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/> <br />
 
                 <h3>Zamawiam tutorial z języka:</h3> <br> 
-                    <input type="checkbox" name="PHP" value="PHP"/> PHP 
-                    <input type="checkbox" name="C/C++" value="C"/> C/C++ 
-                    <input type="checkbox" name="Java" value="Java"/> Java 
+                    <input type="checkbox" id="php" value="PHP"/> PHP 
+                    <input type="checkbox" id="cpp" value="C"/> C/C++ 
+                    <input type="checkbox" id="java" value="Java"/> Java 
                 <h3>Komentarz do zamówienia: </h3>
-                <textarea cols="30" rows="3" name="comment"> </textarea><br />
+                <textarea cols="30" rows="3" id="comment"> </textarea><br />
 
                 <h3>Sposób zapłaty</h3> 
-                    <input type="radio" name="przegladarka" value="MC" required/> Mastercard 
-                    <input type="radio" name="przegladarka" value="VS"/> Visa 
-                    <input type="radio" name="przegladarka" value="DP"/> Przelew bankowy <br> 
+                    <input type="radio" id="ms" value="MC" required/> Mastercard 
+                    <input type="radio" id="vs" value="VS"/> Visa 
+                    <input type="radio" id="pb" value="DP"/> Przelew bankowy <br> 
+                    
+                    <button type="submit" onclick="setCart()"> Wyślij </button> 
+                    <button type="reset" value="Reset"> Anuluj </button>                
+                    <button onclick="getCart()">Wyświetl</button>
+                    <button onclick="deleteCart()">Usuń</button> 
+            </form>    
+            <p id="cart">
 
-                <button type="submit" value="Send"> Wyślij </button> 
-                <button type="reset" value="Reset"> Anuluj </button>                      
-            </form> 
+            </p>
         </article> 
 
         <aside>

@@ -1,20 +1,55 @@
-<!DOCTYPE html>
+<!--!<!DOCTYPE html>
 <html lang="pl">
     <head>
         <title>Formularz rejestracyjny</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            $(document).ready(function () {
+                //akcje do wykonywania po załadowaniu strony
+                $('body').text('Test jQuery!');
+            });
+        </script>
     </head>
     <body>
-        <div>
-            <form>
-                Kod CVV:<br />
-                    <input type="tel" name="cvv" pattern="[0-9]{3}" required><br />
-                <p>
-                    <input type="checkbox" name="akceptacja" required>*Akceptuję regulamin <br />
-                    <input type="submit" value="Rejestruj">
-                    <input type="reset" value="Wyczyść">
-                </p>
-            </form>
-        </div>
+        <button onclick="re"></button>
     </body>
+
+</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Select Country</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <script>
+            s = $("select");
+            html = "";
+            for(var i=0;i<s.options.length; i++) { html+= "<option value=\""+s.options[i].text+"\">\n"; }
+            copy(html);
+        </script>
+    </head>
+    <body>
+
+        <form>
+
+        <!-- credit: http://www.freeformatter.com/iso-country-list-html-select.html -->
+        <input name="country" list="countries">
+        <datalist id="countries">
+            <option value="Afghanistan">
+            <option value="Åland Islands">
+            <option value="Albania">
+            <option value="Algeria">
+            <option value="Zambia">
+            <option value="Zimbabwe">
+        </datalist>
+
+        </form>
+
+    </body>
+</html>

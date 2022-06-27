@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -8,8 +8,7 @@
         <link href="css/style.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container px-5">
                 <a class="navbar-brand" href="index.html">Operating systems</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -17,7 +16,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="table.html">OS popularity table</a></li>
-                        <li class="nav-item"><a class="nav-link" href="form.html">Forms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="form.html">Store</a></li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     </ul>
                 </div>
@@ -26,11 +25,42 @@
         
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="pictures/main.jpg" alt="..."/></div>
+                <div class="tomorrow" data-location-id="086947" data-language="EN" data-unit-system="METRIC" data-skin="light" data-widget-type="upcoming" style="padding-bottom:22px; position:relative;">
+                    <a href="https://www.tomorrow.io/weather/" rel="nofollow noopener noreferrer" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+                        <img alt="Powered by Tomorrow.io" src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg" width="140" height="15"/>
+                    </a>
+                </div>
+                <div class="col-lg-7">
+                    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="pictures/cropped/android2.png" class="d-block w-100" alt="android2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pictures/cropped/mswindows.jpg" class="d-block w-100" alt="mswindows">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pictures/cropped/macos.jpg" class="d-block w-100" alt="macos">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">What is an OS?</h1>
                     <p>An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.</p>
-                    <a class="btn btn-primary" href="#!">More</a>
                 </div>
             </div>
 
@@ -91,13 +121,25 @@
                 </div>
             </div>
         </div>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Maks Pervov 2022</p></div>
+        <footer class="py-5 bg-primary">
+            <p class="m-0 text-center text-white">Copyright &copy; Maks Pervov 2022</p>
         </footer>
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script>
+            (function(d, s, id) {
+                if (d.getElementById(id)) {
+                    if (window.__TOMORROW__) {
+                        window.__TOMORROW__.renderWidget();
+                    }
+                    return;
+                }
+                const fjs = d.getElementsByTagName(s)[0];
+                const js = d.createElement(s);
+                js.id = id;
+                js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+                fjs.parentNode.insertBefore(js, fjs);
+            })(document, 'script', 'tomorrow-sdk');
+        </script>
     </body>
 </html>
